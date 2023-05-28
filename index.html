@@ -13,10 +13,11 @@
 </head>
 
 <body>
+
   <div class="index">
     <span class="start-btn"
       onclick="game
-    .closeIndex()">START GAME!!</span>
+    .closeIndex()">START GAME!</span>
     <span class="start-text"></span>
   </div>
   <div class="game-over-page close">
@@ -28,6 +29,7 @@
     <span class="restart-text"
       onclick="game.toggleGameOverPage('restart')">RESTART GAME</span>
   </div>
+
   <div class="container">
     <div class="card">
       <div class="level-title">
@@ -41,7 +43,19 @@
       </div>
     </div>
     <div class="btns">
-      <div class="row">
+      <ul class="row">
+        <li class="btn" onclick="game.answer('#E6E600')">黃</li>
+        <li class="btn" onclick="game.answer('green')">綠</li>
+        <li class="btn" onclick="game.answer('red')">紅</li>
+        <li class="btn" onclick="game.answer('orange')">橙</li>
+      </ul>
+      <ul class="row">
+        <li class="btn" onclick="game.answer('#805300')">咖</li>
+        <li class="btn" onclick="game.answer('gray')">灰</li>
+        <li class="btn" onclick="game.answer('purple')">紫</li>
+        <li class="btn" onclick="game.answer('blue')">藍</li>
+      </ul>
+      <!-- <div class="row">
         <button type="button"
           class="btn"
           onclick="game.answer('#E6E600')">黃</button>
@@ -54,7 +68,7 @@
         <button type="button"
           class="btn"
           onclick="game.answer('orange')">橙</button>
-      </div>
+      </div> -->
       <div class="row">
         <button type="button"
           class="btn"
@@ -71,7 +85,6 @@
       </div>
     </div>
   </div>
-  <!--  -->
   <div class="audios">
     <audio class="coin-audio">
       <source src="./assets/coin03.mp3"
