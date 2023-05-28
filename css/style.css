@@ -4,23 +4,22 @@
 }
 
 body, html {
+  width: 100%;
+  height: 100%;
   font-family: "Roboto", sans-serif;
   margin: 0;
   display: flex;
   justify-content: center;
-  width: 100%;
-  height: 100%;
 }
 
 .container {
-  width: 100%;
   height: 100%;
-  max-width: 720px;
+  width: 920px;
 }
 
 .index {
-  width: 100%;
   height: 100%;
+  width: 100%;
   font-family: "Press Start 2P", cursive;
   font-weight: 400;
   position: absolute;
@@ -50,8 +49,8 @@ body, html {
 }
 
 .game-over-page {
-  width: 100%;
   height: 100%;
+  width: 100%;
   font-family: "Press Start 2P", cursive;
   font-weight: 400;
   position: absolute;
@@ -100,6 +99,7 @@ body, html {
   flex-direction: column;
   border: 8px solid rgba(120, 120, 120, 0.5);
   transition: 0.5s;
+  position: relative;
 }
 .card.good {
   transition: 0s;
@@ -147,7 +147,7 @@ body, html {
 }
 
 .btns {
-  width: auto;
+  width: 100%;
   height: 30%;
   border: 5px solid rgba(120, 120, 120, 0.5);
   border-top: 2.5px solid rgba(120, 120, 120, 0.5);
