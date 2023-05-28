@@ -22,8 +22,11 @@ body, html {
 }
 .container {
   height: 100dvh;
-  width: 600px;
+  width: 720px;
   position: relative;
+  .card{
+    width: 100%;
+  }
 }
 .index {
   height: 100%;
@@ -199,6 +202,9 @@ body, html {
   // left: 0;
 }
 @media (max-width: 767px) {
+  .container {
+    width: 100%;
+  }
   .index {
     .start-btn:hover {
       font-size: 2rem;
