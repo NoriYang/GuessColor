@@ -25,7 +25,8 @@ body, html {
   @include size(100%);
 }
 .container {
-  @include size(100%, auto);
+  @include size(100%);
+  max-width: 720px;
 }
 .index {
   @include size(100%);
@@ -38,7 +39,6 @@ body, html {
   display: flex;
   justify-content: center;
   align-items: center;
-  transition: 1s;
   z-index: 999;
   .start-btn {
     font-size: 2rem;
@@ -69,7 +69,6 @@ body, html {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  transition: 1s;
   z-index: 999;
   text-align: center;
   .game-over-text {
@@ -198,15 +197,28 @@ body, html {
   position: absolute;
   opacity: 0;
 }
-
+@media (max-width: 767px) {
+  .index {
+    .start-btn:hover {
+      font-size: 2rem;
+    }
+  }
+  .game-over-page{
+    .restart-text:hover {
+      scale: 1;
+    }
+  }
+}
 @media (max-width: 414px) {
   .index {
     .start-btn {
       font-size: 1rem;
     }
+    .start-btn:hover {
+      font-size: 1.1rem;
+    }
   }
   .card {
-    justify-content: start;
     .level-title {
       margin-top: 10px;
       margin-bottom: 0px;
