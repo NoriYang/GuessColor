@@ -13,7 +13,7 @@ body, html {
 }
 
 .container {
-  width: 720px;
+  width: auto;
   height: 100%;
 }
 
