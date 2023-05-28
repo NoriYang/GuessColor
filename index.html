@@ -1,12 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="zh-Hant-TW">
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible"
     content="IE=edge">
   <meta name="viewport"
-    content="width=device-width, initial-scale=1.0">
+    content="width=device-width, initial-scale=1">
   <title>GuessColor</title>
   <link rel="stylesheet"
     href="./css/style.css">
@@ -15,8 +14,9 @@
 <body>
   <div class="container">
     <div class="index">
-      <span class="start-btn" onclick="game
-      .closeIndex()">QSTART GAME</span>
+      <span class="start-btn"
+        onclick="game
+      .closeIndex()">START GAME!</span>
       <span class="start-text"></span>
     </div>
     <div class="game-over-page close">
@@ -25,7 +25,8 @@
         LEVEL
         <span class="level-text">0</span>
       </span>
-      <span class="restart-text" onclick="game.toggleGameOverPage('restart')">RESTART GAME</span>
+      <span class="restart-text"
+        onclick="game.toggleGameOverPage('restart')">RESTART GAME</span>
     </div>
     <div class="card">
       <div class="level-title">
@@ -53,7 +54,7 @@
           class="btn"
           onclick="game.answer('orange')">橙</button>
       </div>
-      <div class="row"> 
+      <div class="row">
         <button type="button"
           class="btn"
           onclick="game.answer('#805300')">咖</button>
@@ -72,13 +73,16 @@
   <!--  -->
   <div class="audios">
     <audio class="coin-audio">
-      <source src="./assets/coin03.mp3" type="audio/ogg">
+      <source src="./assets/coin03.mp3"
+        type="audio/ogg">
     </audio>
     <audio class="poka-audio">
-      <source src="./assets/poka.mp3" type="audio/ogg">
+      <source src="./assets/poka.mp3"
+        type="audio/ogg">
     </audio>
     <audio class="select-audio">
-      <source src="./assets/select06.mp3" type="audio/ogg">
+      <source src="./assets/select06.mp3"
+        type="audio/ogg">
     </audio>
   </div>
   <script src="./js/script.js"></script>
