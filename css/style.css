@@ -6,7 +6,7 @@
 body, html {
   width: 100%;
   height: 100%;
-  font-family: "Roboto", sans-serif;
+  font-family: "Noto Sans TC", sans-serif;
   margin: 0;
   display: flex;
   justify-content: center;
@@ -25,7 +25,7 @@ body, html {
 .index {
   height: 100%;
   width: 100%;
-  font-family: "Press Start 2P", cursive;
+  font-family: "Noto Sans TC", sans-serif;
   font-weight: 400;
   position: absolute;
   top: 0;
@@ -34,17 +34,115 @@ body, html {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
   z-index: 999;
 }
-.index .start-btn {
+.index .info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.index .info .title {
+  text-align: center;
+  font-family: "Noto Sans TC", sans-serif;
+  font-weight: 700;
+  font-size: 5rem;
+  margin: 0;
+  margin-bottom: 30px;
+}
+.index .info .info-btns {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.index .info .info-btns li {
+  text-align: center;
+  letter-spacing: 5px;
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+  font-weight: 200;
+  padding-left: 10px;
+  padding-right: 5px;
+  border: 3px solid rgba(0, 0, 0, 0);
+}
+.index .info .info-btns li:hover {
+  border-bottom: 3px solid #000;
+}
+.index .info .info-btns li:active {
+  background-color: black;
+  color: white;
+}
+.index .info.close {
+  display: none;
+}
+.index .describe {
+  text-align: center;
+}
+.index .describe h2 {
+  font-size: 4rem;
+  margin: 0;
+  margin-bottom: 15px;
+  text-align: center;
+  border-bottom: 2px solid #000;
+}
+.index .describe .describe-ol {
+  text-align: left;
+  font-size: 1.5rem;
+  margin: 0;
+  letter-spacing: 2px;
+}
+.index .describe .describe-ul {
+  border-top: 2px solid #000;
+  border-bottom: 2px solid #000;
+  list-style: none;
+  margin: 0;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  padding: 0;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+.index .describe .describe-ul h3 {
   font-size: 2rem;
+  margin: 0;
+  padding: 0;
+  padding-bottom: 15px;
+  text-align: center;
+  border-bottom: 2px solid #000;
+  margin-bottom: 10px;
+}
+.index .describe .describe-ul li {
+  font-weight: 900;
+  font-size: 2rem;
+}
+.index .describe .describe-btn {
+  padding: 10px 20px;
+  border: 1px solid #000;
+  background-color: black;
+  color: white;
+  font-weight: 600;
+  font-size: 18px;
+}
+.index .describe.close {
+  display: none;
+}
+.index .countdown {
+  font-family: "Press Start 2P", cursive;
+  font-size: 2rem;
+}
+.index .countdown.close {
+  display: none;
+}
+.index .start-btn {
+  font-size: 1.5rem;
   cursor: pointer;
 }
 .index .start-btn.hide {
   display: none;
 }
 .index .start-btn:hover {
-  font-size: 2.1rem;
+  font-size: 1.6rem;
 }
 .index.close {
   display: none;
@@ -95,14 +193,13 @@ body, html {
 .card {
   width: 100%;
   height: 70%;
-  font-family: "Noto Sans TC", sans-serif;
   background-color: #eee;
   font-weight: bold;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  border: 8px solid rgba(120, 120, 120, 0.5);
+  border: 5px solid rgba(120, 120, 120, 0.5);
   transition: 0.5s;
   position: relative;
 }
@@ -174,7 +271,6 @@ body, html {
   background-color: #eee;
   width: 100%;
   height: 100%;
-  font-family: "Noto Sans TC", sans-serif;
   font-size: 4rem;
   font-weight: 500;
   padding: 0;
@@ -210,6 +306,18 @@ body, html {
     height: 100%;
   }
   .index .start-btn:hover {
+    font-size: 2rem;
+  }
+  .index .describe h2 {
+    font-size: 3rem;
+  }
+  .index .describe .describe-ol {
+    font-size: 1.2rem;
+  }
+  .index .describe .describe-ul h3 {
+    font-size: 2rem;
+  }
+  .index .describe .describe-ul li {
     font-size: 2rem;
   }
   .game-over-page .restart-text:hover {

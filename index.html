@@ -7,7 +7,10 @@
     content="IE=edge">
   <meta name="viewport"
     content="width=device-width, initial-scale=1">
-  <title>GuessColor</title>
+  <title>看字選色</title>
+  <link rel="icon"
+    type="image/x-icon"
+    href="assets/images/favicon.ico">
   <link rel="stylesheet"
     href="./css/style.css">
 </head>
@@ -15,10 +18,40 @@
 <body>
 
   <div class="index">
-    <span class="start-btn"
-      onclick="game
-    .closeIndex()">START GAME!</span>
-    <span class="start-text"></span>
+    <div class="info">
+      <h1 class="title">看字選色</h1>
+      <ul class="info-btns">
+        <li class="start-btn" onclick="game.closeIndex()">開始遊戲</li>
+        <li onclick="game.closePage('info')">遊戲說明</li>
+      </ul>
+    </div>
+    <div class="describe close">
+      <h2>玩法介紹</h2>
+      <ol class="describe-ol">
+        <li>總時間上限為 10 秒鐘</li>
+        <li>每過兩關獎勵為增加 1 秒鐘</li>
+        <li>請選擇字的顏色, 非字本身</li>
+        <li>答錯會扣 1 秒鐘</li>
+      </ol>
+      <ul class="describe-ul">
+        <h3>選擇範例</h3>
+        <li>
+          <span style="color: red">藍</span> → 紅色
+        </li>
+        <li>
+          <span style="color: green">藍</span> → 綠色
+        </li>
+        <li>
+          <span style="color: purple">藍</span> → 紫色
+        </li>
+      </ul>
+      <button type="button"
+        class="describe-btn"
+        onclick="game.closePage('describe')">回首頁</button>
+    </div>
+    <div class="countdown close">
+      <span class="countdown-number">3</span>
+    </div>
   </div>
   <div class="game-over-page close">
     <span class="game-over-text">GAME OVER</span>
@@ -44,16 +77,24 @@
     </div>
     <div class="btns">
       <ul class="row">
-        <li class="btn" onclick="game.answer('#E6E600')">黃</li>
-        <li class="btn" onclick="game.answer('green')">綠</li>
-        <li class="btn" onclick="game.answer('red')">紅</li>
-        <li class="btn" onclick="game.answer('orange')">橙</li>
+        <li class="btn"
+          onclick="game.answer('#E6E600')">黃</li>
+        <li class="btn"
+          onclick="game.answer('green')">綠</li>
+        <li class="btn"
+          onclick="game.answer('red')">紅</li>
+        <li class="btn"
+          onclick="game.answer('orange')">橙</li>
       </ul>
       <ul class="row">
-        <li class="btn" onclick="game.answer('#805300')">咖</li>
-        <li class="btn" onclick="game.answer('gray')">灰</li>
-        <li class="btn" onclick="game.answer('purple')">紫</li>
-        <li class="btn" onclick="game.answer('blue')">藍</li>
+        <li class="btn"
+          onclick="game.answer('#805300')">咖</li>
+        <li class="btn"
+          onclick="game.answer('gray')">灰</li>
+        <li class="btn"
+          onclick="game.answer('purple')">紫</li>
+        <li class="btn"
+          onclick="game.answer('blue')">藍</li>
       </ul>
       <!-- <div class="row">
         <button type="button"

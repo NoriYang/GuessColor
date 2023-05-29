@@ -37,6 +37,7 @@ function Game(titleData, colorData) {
   this.selectAudio = document.querySelector('.select-audio');
   this.coin = document.querySelector('.coin-audio');
   this.poka = document.querySelector('.poka-audio');
+  this.changeVolume();
 };
 // 遊戲初始化
 Game.prototype.initGame = function() {
@@ -52,39 +53,34 @@ Game.prototype.startGame = function () {
 // 關閉首頁
 Game.prototype.closeIndex = function() {
   const indexPage = document.querySelector('.index')
-  const startButton = document.querySelector('.start-btn');
-  const startText = document.querySelector('.start-text');
-  this.changeVolume();
+  const infoDOM = document.querySelector('.info');
+  const countDownDOM = document.querySelector('.countdown');
+  const countDownNumber = document.querySelector('.countdown-number')
+  infoDOM.classList.add('close');
+  countDownDOM.classList.remove('close');
   this.selectAudio.currentTime = 0;
   this.selectAudio.play();
-  startButton.classList.add('hide');
   let time = 3;
-  startText.innerText = time;
+  countDownNumber.innerText = time;
   let timerClose = setInterval(()=>{
     if(time > 0) {
       time -= 1;
-      startText.innerText = time;
+      countDownNumber.innerText = time;
       if(time == 0) {
-        startText.innerText = 'START';
+        countDownNumber.innerText = 'START';
       }
     } else {
       indexPage.classList.add('close');
+      countDownDOM.classList.add('close');
+      infoDOM.classList.remove('close');
       clearInterval(timerClose);
       this.startGame();
     }
   }, 1000)
 };
-// 初始化首頁
-Game.prototype.initIndex = function(){
-  const startButton = document.querySelector('.start-btn');
-  const startText = document.querySelector('.start-text');
-  startButton.classList.remove('hide');
-  startText.innerText = '';
-};
 // 開啟首頁
 Game.prototype.backToIndex = function() {
   const indexDOM = document.querySelector('.index');
-  this.initIndex();
   indexDOM.classList.remove('close');
 };
 // 開始計時
@@ -187,6 +183,20 @@ Game.prototype.changeVolume = function(value = 0.5){
   this.selectAudio.volume = value;
   this.coin.volume = value;
   this.poka.volume = value;
+};
+// 遊戲說明 / 回首頁
+Game.prototype.closePage = function(pageName) {
+  const infoDOM = document.querySelector('.info');
+  const describe = document.querySelector('.describe')
+  this.selectAudio.currentTime = 0;
+  this.selectAudio.play();
+  if(pageName === 'info') {
+    infoDOM.classList.add('close');
+    describe.classList.remove('close');
+  } else if (pageName === 'describe') {
+    describe.classList.add('close');
+    infoDOM.classList.remove('close');
+  }
 }
 
 const game = new Game(levelTitleData, levelColorData);
